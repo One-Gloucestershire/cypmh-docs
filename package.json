@@ -1,0 +1,39 @@
+{
+  "name": "cypmh-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CYPMH - DOCS",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/One-Gloucestershire/CYPMH-DOCS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/One-Gloucestershire/CYPMH-DOCS/issues"
+  },
+  "homepage": "https://github.com/One-Gloucestershire/CYPMH-DOCS#readme",
+  "dependencies": {
+    "gatsby": "^3.0.1",
+    "gatsby-plugin-sass": "^4.1.0",
+    "gatsby-plugin-sitemap": "^3.1.0",
+    "gatsby-source-filesystem": "^3.1.0",
+    "gatsby-transformer-remark": "^3.1.0",
+    "nhsuk-frontend": "^5.0.0",
+    "nhsuk-react-components": "^1.2.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
