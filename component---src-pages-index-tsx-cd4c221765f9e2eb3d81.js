@@ -1,0 +1,2 @@
+(self.webpackChunkcypmh_docs=self.webpackChunkcypmh_docs||[]).push([[691],{8308:function(e,n,c){"use strict";c.r(n);var l=c(7294),t=c(1375),u=c(3251);n.default=function(){return l.createElement("main",null,l.createElement(t.B,null),l.createElement(u.w,null))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-cd4c221765f9e2eb3d81.js.map
