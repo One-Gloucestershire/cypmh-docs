@@ -24,5 +24,5 @@ module.exports = {
     `gatsby-transformer-remark`,
     "gatsby-plugin-sitemap",
   ],
-  pathPrefix: "/CYPMH-DOCS",
+  pathPrefix: `/cypmh-docs`,
 };

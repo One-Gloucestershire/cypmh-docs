@@ -1,3 +1,4 @@
+import "../pages/styles.scss"
 import React from "react"
 import { graphql } from "gatsby"
 import { CYPMADocsFooter } from "../components/cypmh-docs-footer"
