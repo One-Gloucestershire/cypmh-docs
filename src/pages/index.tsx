@@ -4,8 +4,6 @@ import * as React from "react"
 import { CYPMADocsHeader } from "../components/cypmh-docs-header"
 import { CYPMADocsFooter } from "../components/cypmh-docs-footer"
 import { Breadcrumb, Hero } from "nhsuk-react-components"
-import { withPrefix } from "gatsby"
-
 
 // markup
 const IndexPage = () => {
