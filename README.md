@@ -2,6 +2,9 @@
 
 Basic gatsby site that renders markdown week-notes and adrs. 
 
+Site page can be found [here](https://one-gloucestershire.github.io/cypmh-docs).
+
+
 All markdown files should be created in the /markdown-pages folder and should comprise of a frontmatter and main content. The front matter should be placed between the triple dashes "---" and include the following key value pairs:
 
 - slug: the url that the page should be found at
