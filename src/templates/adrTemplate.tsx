@@ -1,9 +1,9 @@
 import "../pages/styles.scss"
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 import { CYPMADocsFooter } from "../components/cypmh-docs-footer"
 import { CYPMADocsHeader } from "../components/cypmh-docs-header"
-import { Col, Container, Panel } from "nhsuk-react-components"
+import { Breadcrumb, Col, Container, Panel } from "nhsuk-react-components"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -12,7 +12,11 @@ export default function Template({
   return (
         <main>
           <CYPMADocsHeader></CYPMADocsHeader>
-          <Panel.Group>
+          <Breadcrumb>
+        <Breadcrumb.Item href={withPrefix("/")}>Home</Breadcrumb.Item>
+        <Breadcrumb.Item href={withPrefix("/adrs")}>ADRs</Breadcrumb.Item>
+        <Breadcrumb.Item>{frontmatter.title}</Breadcrumb.Item>
+      </Breadcrumb>          <Panel.Group>
             <Container>
               <Col width="one-quarter"><Panel></Panel></Col>
               <Col width="one-half">
