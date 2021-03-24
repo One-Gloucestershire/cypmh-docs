@@ -21,7 +21,7 @@ export default function Template({
 
         <Container>
           <Col width="one-quarter"><Panel></Panel></Col>
-          <Col width="one-half">
+          <Col width="two-thirds">
             <Panel label={frontmatter.title}>
               {/* <h2>{frontmatter.date}</h2> */}
               <div
