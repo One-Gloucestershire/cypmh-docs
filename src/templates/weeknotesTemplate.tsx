@@ -19,7 +19,7 @@ export default function Template({
           <Col width="full"><Panel><h2 style={{ marginTop: 36 }}>Weeknotes</h2></Panel></Col>
           <Panel><ContentsList aria-label="Weeknotes">
           {data.allMarkdownRemark.edges.filter(edge => edge.node.frontmatter.type === "week-note").map(edge =>
-            <ContentsList.Item href={edge.node.frontmatter.slug}>
+            <ContentsList.Item href={`/cypmh-docs/${edge.node.frontmatter.slug}`}>
               {edge.node.frontmatter.title}
             </ContentsList.Item>)
           }
