@@ -16,10 +16,10 @@ export default function Template({
       </Breadcrumb>
       <Container>
         <Panel.Group>
-          <Col width="one-quarter"><Panel></Panel></Col>
+          <Col width="full"><Panel><h2 style={{ marginTop: 36 }}>Architectural Decision Records</h2></Panel></Col>
           {data.allMarkdownRemark.edges.filter((edge:any) => edge.node.frontmatter.type === "adr").map((edge:any) =>
-            <Col width="one-half" key={edge.node.frontmatter.date + edge.node.frontmatter.type}>
-              <Panel><h3>{edge.node.frontmatter.title}</h3><Link to={edge.node.frontmatter.slug}>{edge.node.frontmatter.title}</Link></Panel>
+            <Col width="full" key={edge.node.frontmatter.date + edge.node.frontmatter.type}>
+              <Panel><p><Link to={edge.node.frontmatter.slug}>{edge.node.frontmatter.title}</Link> - {edge.node.frontmatter.date}</p></Panel>
             </Col>
           )}
         </Panel.Group>

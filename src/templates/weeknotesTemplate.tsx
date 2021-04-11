@@ -3,7 +3,7 @@ import React from "react"
 import { graphql, Link, withPrefix } from "gatsby"
 import { CYPMADocsHeader } from "../components/cypmh-docs-header"
 import { CYPMADocsFooter } from "../components/cypmh-docs-footer"
-import { Breadcrumb, Col, Container, Panel, Row } from "nhsuk-react-components"
+import { Breadcrumb, Col, Container, Panel, Row, ContentsList } from "nhsuk-react-components"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -16,14 +16,15 @@ export default function Template({
       </Breadcrumb>
       <Container>
         <Panel.Group>
-          <Col width="one-quarter"><Panel></Panel></Col>
+          <Col width="full"><Panel><h2 style={{ marginTop: 36 }}>Weeknotes</h2></Panel></Col>
+          <Panel><ContentsList aria-label="Weeknotes">
           {data.allMarkdownRemark.edges.filter(edge => edge.node.frontmatter.type === "week-note").map(edge =>
-            <Col width="one-half" key={edge.node.frontmatter.date + edge.node.frontmatter.type}>
-              <Panel><h3>{edge.node.frontmatter.title}</h3><Link to={edge.node.frontmatter.slug}>{edge.node.frontmatter.title}</Link></Panel>
-            </Col>
-          )}
+            <ContentsList.Item href={edge.node.frontmatter.slug}>
+              {edge.node.frontmatter.title}
+            </ContentsList.Item>)
+          }
+          </ContentsList></Panel>
         </Panel.Group>
-        <Col width="one-quarter"><Panel></Panel></Col>
       </Container>
       <CYPMADocsFooter></CYPMADocsFooter>
     </main>
