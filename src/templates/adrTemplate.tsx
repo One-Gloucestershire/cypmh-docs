@@ -18,15 +18,14 @@ export default function Template({
         <Breadcrumb.Item>{frontmatter.title}</Breadcrumb.Item>
       </Breadcrumb>          <Panel.Group>
             <Container>
-              <Col width="one-quarter"><Panel></Panel></Col>
-              <Col width="one-half">
-                <Panel label={frontmatter.title}>
+              <Col width="two-thirds">
+                <Panel>
+                  <h2  style={{ marginTop: 36 }}>{frontmatter.title}</h2>
                   <div
                     dangerouslySetInnerHTML={{ __html: html }}
                   />
                 </Panel>
               </Col>
-              <Col width="one-quarter"><Panel></Panel></Col>
             </Container>
           </Panel.Group>
           <CYPMADocsFooter></CYPMADocsFooter>
